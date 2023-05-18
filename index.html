@@ -1,0 +1,256 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>arweave-archive-cli</title>
+	<meta name="description" content="Documentation for arweave-archive-cli">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">arweave-archive-cli</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>arweave-archive-cli</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<h1 align="center">arweave-archive-cli</h1>
+				<p>A CLI tool to archive webpage and it&#39;s screenshot to <a href="https://arweave.org/">Arweave</a>.</p>
+				<ul>
+					<li><a href="#installation">Installation</a></li>
+					<li><a href="#github-actions">Github Actions</a></li>
+					<li><a href="#usage">Usage</a><ul>
+							<li><a href="#setup-arweave-jwk-path">Setup</a></li>
+							<li><a href="#archive">Archive</a></li>
+							<li><a href="#github-actions-for-archive">Github Actions for Archive</a></li>
+						</ul>
+					</li>
+					<li><a href="#author">Author</a></li>
+					<li><a href="#-contributing">🤝 Contributing</a></li>
+					<li><a href="#show-your-support">Show your support</a></li>
+				</ul>
+				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+					<h2>Installation</h2>
+				</a>
+				<pre><code class="language-sh">npm install arweave-archive-cli -g
+</code></pre>
+				<p>OR</p>
+				<pre><code class="language-sh">yarn add global arweave-archive-cli
+</code></pre>
+				<p>Run <code>arweave-archive</code> or <code>aar</code> in terminal for more information regarding how to use the CLI.</p>
+				<pre><code class="language-html">$ aar
+Usage: Arweave-Archive [options] [command]
+
+A CLI tool to archive webpage and it&#x27;s screenshot to Arweave
+
+Options:
+  -v, --version            output the version number
+  -h, --help               display help for command
+
+Commands:
+  setup <span class="hljs-tag">&lt;<span class="hljs-name">jwkPath</span>&gt;</span>          setup Arweave JWK file path
+  archive [options] <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>  archive url single page webpage and screenshot to Arweave
+  archives                 display all your archives
+  backup <span class="hljs-tag">&lt;<span class="hljs-name">path</span>&gt;</span>            backup archives information
+  init-action              initialize archive github action
+  help [command]           display help for command
+</code></pre>
+				<a href="#github-actions" id="github-actions" style="color: inherit; text-decoration: none;">
+					<h2>Github Actions</h2>
+				</a>
+				<ol>
+					<li><a href="https://github.com/pawanpaudel93/arweave-archive-action">arweave-archive-action</a>: Archive single page html and screenshot of websites to Arweave.</li>
+				</ol>
+				<ul>
+					<li>A demo project using arweave-archive-action to archive list of urls and save it to a JSON file: <a href="https://github.com/pawanpaudel93/arweave-archive-cronjob">arweave-archive-cronjob</a></li>
+				</ul>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage</h2>
+				</a>
+				<a href="#setup-arweave-jwk-path" id="setup-arweave-jwk-path" style="color: inherit; text-decoration: none;">
+					<h3>Setup Arweave JWK Path</h3>
+				</a>
+				<p>Run the following command with a Arweave JWK file path.</p>
+				<pre><code class="language-sh">aar setup <span class="hljs-string">&quot;arweave-jwk.json&quot;</span>
+</code></pre>
+				<a href="#archive" id="archive" style="color: inherit; text-decoration: none;">
+					<h3>Archive</h3>
+				</a>
+				<pre><code class="language-html">Usage: Arweave-Archive archive [options] <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>
+
+archive url single page webpage and screenshot to Arweave
+
+Arguments:
+  url                             url to archive
+
+Options:
+  -j, --jwk-path <span class="hljs-tag">&lt;<span class="hljs-name">jwkPath</span>&gt;</span>        Arweave JWK file path
+  -g, --gateway-url <span class="hljs-tag">&lt;<span class="hljs-name">gatewayUrl</span>&gt;</span>  Arweave gateway URL (default: &quot;https://arweave.net&quot;)
+  -b, --bundler-url <span class="hljs-tag">&lt;<span class="hljs-name">bundlerUrl</span>&gt;</span>  Bundler URL (default: &quot;https://node2.bundlr.network&quot;)
+  -h, --help                      display help for command
+</code></pre>
+				<p>Run this command to save single page html and screenshot for the given url to Arweave.</p>
+				<pre><code class="language-sh">aar archive https://arweave.org
+</code></pre>
+				<p>To display all the archives made:</p>
+				<pre><code class="language-sh">aar archives
+</code></pre>
+				<a href="#github-actions-for-archive" id="github-actions-for-archive" style="color: inherit; text-decoration: none;">
+					<h3>Github Actions for Archive</h3>
+				</a>
+				<pre><code class="language-sh">aar init-action
+</code></pre>
+				<a href="#author" id="author" style="color: inherit; text-decoration: none;">
+					<h2>Author</h2>
+				</a>
+				<p>👤 <strong>Pawan Paudel</strong></p>
+				<ul>
+					<li>Github: <a href="https://github.com/pawanpaudel93">@pawanpaudel93</a></li>
+				</ul>
+				<a href="#🤝-contributing" id="🤝-contributing" style="color: inherit; text-decoration: none;">
+					<h2>🤝 Contributing</h2>
+				</a>
+				<p>Contributions, issues and feature requests are welcome!<br />Feel free to check <a href="https://github.com/pawanpaudel93/arweave-archive-cli/issues">issues page</a>.</p>
+				<a href="#show-your-support" id="show-your-support" style="color: inherit; text-decoration: none;">
+					<h2>Show your support</h2>
+				</a>
+				<p>Give a ⭐️ if this project helped you!</p>
+				<p>Copyright © 2023 <a href="https://github.com/pawanpaudel93">Pawan Paudel</a>.<br /></p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#errorwithmessage" class="tsd-kind-icon">Error<wbr>With<wbr>Message</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#cli_name" class="tsd-kind-icon">CLI_<wbr>NAME</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#cli_version" class="tsd-kind-icon">CLI_<wbr>VERSION</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#logger" class="tsd-kind-icon">logger</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#program" class="tsd-kind-icon">program</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#archive" class="tsd-kind-icon">archive</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#archives" class="tsd-kind-icon">archives</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#backup" class="tsd-kind-icon">backup</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#checkfileexists" class="tsd-kind-icon">check<wbr>File<wbr>Exists</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getconfig" class="tsd-kind-icon">get<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getdb" class="tsd-kind-icon">get<wbr>Db</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getdbdata" class="tsd-kind-icon">get<wbr>DbData</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#geterrormessage" class="tsd-kind-icon">get<wbr>Error<wbr>Message</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#initaction" class="tsd-kind-icon">init<wbr>Action</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#iserrorwithmessage" class="tsd-kind-icon">is<wbr>Error<wbr>With<wbr>Message</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#joinurl" class="tsd-kind-icon">join<wbr>Url</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#savetolocal" class="tsd-kind-icon">save<wbr>ToLocal</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#setup" class="tsd-kind-icon">setup</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#toerrorwithmessage" class="tsd-kind-icon">to<wbr>Error<wbr>With<wbr>Message</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
