@@ -7,7 +7,7 @@ export const archive = async (
   url: string,
   options: { jwkPath?: string; gatewayUrl: string; bundlerUrl: string }
 ) => {
-  logger.info(`Capturing url: ${url}.`);
+  logger.info(`Archiving url: ${url}.`);
   const config = getConfig();
   const jwk = options?.jwkPath ?? (config.get('jwkPath') as string);
   if (!jwk) {

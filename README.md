@@ -49,7 +49,7 @@ Commands:
 
 1. [arweave-archive-action](https://github.com/pawanpaudel93/arweave-archive-action): Archive single page html and screenshot of websites to Arweave.
 
-- A demo project using arweave-archive-action to capture list of urls and save it to a JSON file: [arweave-archive-cronjob](https://github.com/pawanpaudel93/arweave-archive-cronjob)
+- A demo project using arweave-archive-action to archive list of urls and save it to a JSON file: [arweave-archive-cronjob](https://github.com/pawanpaudel93/arweave-archive-cronjob)
 
 ## Usage
 
