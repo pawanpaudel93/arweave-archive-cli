@@ -11,7 +11,7 @@ export const archive = async (
   const config = getConfig();
   const jwk = options?.jwkPath ?? (config.get('jwkPath') as string);
   if (!jwk) {
-    logger.error('Arweave JWK not available.');
+    logger.error('Arweave JWK path not setup or passed.');
     return;
   }
   const archive = new Archive(jwk, options.gatewayUrl, options.bundlerUrl);
@@ -26,15 +26,17 @@ export const archive = async (
     if (archives === null) {
       archives = db.addCollection('archives');
     }
-    archives.insert({
+    const archivedData = {
       id: txID,
       url,
       title,
       webpage,
       screenshot,
       timestamp,
-    });
-    logger.info(`${url} archived to ${webpage}.`);
+    };
+    const stringifiedData = JSON.stringify(archivedData, null, 4);
+    logger.info(`${url} archived.\n ${stringifiedData}`);
+    archives.insert(archivedData);
     db.close();
   } else {
     logger.error(message);
