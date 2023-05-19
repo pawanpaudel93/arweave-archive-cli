@@ -44,7 +44,7 @@
     "node": ">=16"
   },
   "dependencies": {
-    "arweave-archive": "^0.0.2",
+    "arweave-archive": "^0.0.3",
     "commander": "^9.4.0",
     "conf": "^10.2.0",
     "lokijs-promise": "^1.0.4",
