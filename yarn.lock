@@ -1179,10 +1179,10 @@ arrify@^2.0.1:
   resolved "https://registry.npmjs.org/arrify/-/arrify-2.0.1.tgz#c9655e9331e0abcd588d2a7cad7e9956f66701fa"
   integrity sha512-3duEwti880xqi4eAMN8AyR4a0ByT90zoYdLlevfrvU43vb0YZwZVfxOgxWrLXXXpyugL0hNZc9G6BiB5B3nUug==
 
-arweave-archive@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.npmjs.org/arweave-archive/-/arweave-archive-0.0.3.tgz#cfd1b351351402c1d23f3128118010df074a4735"
-  integrity sha512-gga9DMwFXEoU/+uAxfUZRyJSi6iSmIV+HHDd44iGyKPH5/V4s3XQyp/Pl/z4SKtIFGHeeACjjNO/gVKQ3Hhj+Q==
+arweave-archive@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/arweave-archive/-/arweave-archive-0.0.4.tgz#41ae3e9b6c13e8826c9d7107f70acc5357ec5a39"
+  integrity sha512-4vv3AhEzpfZotd2miriKBtM4aLb6w/qPZ1yc7/Lh7G6mT4fmVyu5zYtUa0HBsrhmNHuWoEZYx2tA6IxUq6uPBg==
   dependencies:
     arbundles "^0.9.6"
     arweave "^1.13.7"
@@ -2340,9 +2340,9 @@ duplexer3@^0.1.4:
   integrity sha512-1A8za6ws41LQgv9HrE/66jyC5yuSjQ3L/KOpFtoBilsAK2iA2wuS5rTt1OCzIvtS2V7nVmedsUU+DGRcjBmOYA==
 
 electron-to-chromium@^1.4.284:
-  version "1.4.399"
-  resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.399.tgz#df8a63d1f572124ad8b5d846e38b0532ad7d9d54"
-  integrity sha512-+V1aNvVgoWNWYIbMOiQ1n5fRIaY4SlQ/uRlrsCjLrUwr/3OvQgiX2f5vdav4oArVT9TnttJKcPCqjwPNyZqw/A==
+  version "1.4.402"
+  resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.402.tgz#9aa7bbb63081513127870af6d22f829344c5ba57"
+  integrity sha512-gWYvJSkohOiBE6ecVYXkrDgNaUjo47QEKK0kQzmWyhkH+yoYiG44bwuicTGNSIQRG3WDMsWVZJLRnJnLNkbWvA==
 
 elliptic@6.5.4, elliptic@^6.5.4:
   version "6.5.4"
@@ -2737,9 +2737,9 @@ fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
 
 fast-diff@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/fast-diff/-/fast-diff-1.2.0.tgz#73ee11982d86caaf7959828d519cfe927fac5f03"
-  integrity sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==
+  version "1.3.0"
+  resolved "https://registry.npmjs.org/fast-diff/-/fast-diff-1.3.0.tgz#ece407fa550a64d638536cd727e129c61616e0f0"
+  integrity sha512-VxPP4NqbUjj6MaAOafWeUn2cXWLcCtljklUtZf0Ind4XQ+QPtmA0b18zZy0jIQx+ExRVCR/ZQpBmik5lXshNsw==
 
 fast-glob@^3.2.9:
   version "3.2.12"
@@ -5537,21 +5537,7 @@ signal-exit@^3.0.2:
 
 "single-file-cli@git+https://github.com/pawanpaudel93/single-file-cli.git":
   version "1.0.21"
-  uid "75aaa0ebddd55abddaa5051cd86f96025bb249c5"
   resolved "git+https://github.com/pawanpaudel93/single-file-cli.git#75aaa0ebddd55abddaa5051cd86f96025bb249c5"
-  dependencies:
-    file-url "3.0.0"
-    iconv-lite "0.6.3"
-    jsdom "20.0.1"
-    puppeteer-core "19.0.0"
-    selenium-webdriver "4.5.0"
-    single-file-core "1.0.25"
-    strong-data-uri "1.0.6"
-    yargs "17.6.0"
-
-"single-file-cli@https://github.com/pawanpaudel93/single-file-cli.git":
-  version "1.0.21"
-  resolved "https://github.com/pawanpaudel93/single-file-cli.git#75aaa0ebddd55abddaa5051cd86f96025bb249c5"
   dependencies:
     file-url "3.0.0"
     iconv-lite "0.6.3"
@@ -6115,9 +6101,9 @@ tslib@^1.8.1:
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
 tslib@^2.1.0:
-  version "2.5.1"
-  resolved "https://registry.npmjs.org/tslib/-/tslib-2.5.1.tgz#f2ad78c367857d54e49a0ef9def68737e1a67b21"
-  integrity sha512-KaI6gPil5m9vF7DKaoXxx1ia9fxS4qG5YveErRRVknPDXXriu5M8h48YRjB6h5ZUOKuAKlSJYb0GaDe8I39fRw==
+  version "2.5.2"
+  resolved "https://registry.npmjs.org/tslib/-/tslib-2.5.2.tgz#1b6f07185c881557b0ffa84b111a0106989e8338"
+  integrity sha512-5svOrSA2w3iGFDs1HibEVBGbDrAY82bFQ3HZ3ixB+88nsbsWQoKqDRb5UBYAUPEzbBn6dAp5gRNXglySbx1MlA==
 
 tslog@^3.3.3:
   version "3.3.4"

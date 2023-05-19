@@ -44,12 +44,11 @@
     "node": ">=16"
   },
   "dependencies": {
-    "arweave-archive": "^0.0.3",
+    "arweave-archive": "^0.0.4",
     "commander": "^9.4.0",
     "conf": "^10.2.0",
     "lokijs-promise": "^1.0.4",
     "prompts": "^2.4.2",
-    "single-file-cli": "https://github.com/pawanpaudel93/single-file-cli.git",
     "tslog": "^3.3.3"
   },
   "devDependencies": {
