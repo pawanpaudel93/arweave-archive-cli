@@ -18,8 +18,7 @@ export async function initAction() {
       validate: (value) => {
         if (typeof value === 'string' && value.trim() !== '')
           return true
-        else
-          return 'Cron Expression is Required'
+        else return 'Cron Expression is Required'
       },
     })
     if (!response.value)

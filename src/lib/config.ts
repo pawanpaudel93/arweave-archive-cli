@@ -1,6 +1,8 @@
 import path from 'node:path'
 
 import Conf from 'conf'
+
+// @ts-expect-error declaration missing
 import { getCollection, getDB, initDB } from 'lokijs-promise'
 import { Logger } from 'tslog'
 
@@ -53,14 +55,23 @@ export async function getDbData(type?: string) {
   if (collection.length > 0) {
     output = [
       JSON.stringify(
-        collection.map(archive => ({
-          id: archive.id,
-          url: archive.url,
-          title: archive.title,
-          webpage: archive.webpage,
-          screenshot: archive.screenshot,
-          timestamp: archive.timestamp,
-        })),
+        collection.map(
+          (archive: {
+            id: string
+            url: string
+            title: string
+            webpage: string
+            screenshot: string
+            timestamp: number
+          }) => ({
+            id: archive.id,
+            url: archive.url,
+            title: archive.title,
+            webpage: archive.webpage,
+            screenshot: archive.screenshot,
+            timestamp: archive.timestamp,
+          }),
+        ),
         null,
         2,
       ),
