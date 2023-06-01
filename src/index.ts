@@ -1,23 +1,23 @@
 #!/usr/bin/env node
 
-import { Command } from 'commander';
+import { Command } from 'commander'
 
-import { archive, archives } from './lib/archive';
-import { backup } from './lib/backup';
-import { CLI_NAME, CLI_VERSION, setup } from './lib/config';
-import { initAction } from './lib/ghaction';
+import { archive, archives } from './lib/archive'
+import { backup } from './lib/backup'
+import { CLI_NAME, CLI_VERSION, setup } from './lib/config'
+import { initAction } from './lib/ghaction'
 
-const program = new Command();
+const program = new Command()
 program
   .name(CLI_NAME)
-  .description("A CLI tool to archive webpage and it's screenshot to Arweave")
-  .version(CLI_VERSION, '-v, --version', 'output the version number');
+  .description('A CLI tool to archive webpage and it\'s screenshot to Arweave')
+  .version(CLI_VERSION, '-v, --version', 'output the version number')
 
 program
   .command('setup')
   .description('setup Arweave JWK file path')
   .argument('<jwkPath>', 'Arweave JWK file path')
-  .action(setup);
+  .action(setup)
 
 program
   .command('archive')
@@ -27,29 +27,29 @@ program
   .option(
     '-g, --gateway-url <gatewayUrl>',
     'Arweave gateway URL',
-    'https://arweave.net'
+    'https://arweave.net',
   )
   .option(
     '-b, --bundler-url <bundlerUrl>',
     'Bundler URL',
-    'https://node2.bundlr.network'
+    'https://node2.bundlr.network',
   )
-  .action(archive);
+  .action(archive)
 
 program
   .command('archives')
   .description('display all your archives')
-  .action(archives);
+  .action(archives)
 
 program
   .command('backup')
   .description('backup archives information')
   .argument('<path>', 'save to local path')
-  .action(backup);
+  .action(backup)
 
 program
   .command('init-action')
   .description('initialize archive github action')
-  .action(initAction);
+  .action(initAction)
 
-program.parse(process.argv);
+program.parse(process.argv)
