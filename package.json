@@ -52,7 +52,7 @@
     "prepare-release": "run-s reset-hard doc:html version doc:publish"
   },
   "dependencies": {
-    "arweave-archive": "^0.0.6",
+    "arweave-archive": "^0.0.8",
     "commander": "^9.4.0",
     "conf": "^10.2.0",
     "lokijs-promise": "^1.0.4",
