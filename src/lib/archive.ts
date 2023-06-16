@@ -10,11 +10,11 @@ export async function archive(
   try {
     logger.info(`Archiving url: ${url}.`)
     const jwk = await getJWK(options?.jwkPath)
-    const archive = new ArweaveArchiver(jwk, {
+    const archiver = new ArweaveArchiver(jwk, {
       gatewayUrl: options.gatewayUrl,
       bundlerUrl: options.bundlerUrl,
     })
-    const { status, message, txID, title, timestamp } = await archive.archiveUrl(
+    const { status, message, txID, title, timestamp } = await archiver.archiveUrl(
       url,
     )
     if (status === 'success') {
@@ -44,8 +44,8 @@ export async function archive(
 export async function archives(options: { jwkPath?: string }) {
   try {
     const jwk = await getJWK(options.jwkPath)
-    const archive = new ArweaveArchiver(jwk)
-    const archives = await archive.getAllArchives()
+    const archiver = new ArweaveArchiver(jwk)
+    const archives = await archiver.getAllArchives()
     console.log(archives)
   }
   catch (error) {
