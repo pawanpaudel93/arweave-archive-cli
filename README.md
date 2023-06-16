@@ -7,6 +7,8 @@ A CLI tool to archive webpage and it's screenshot to [Arweave](https://arweave.o
 - [Usage](#usage)
   - [Setup](#setup-arweave-jwk-path)
   - [Archive](#archive)
+  - [Archives](#archives)
+  - [Backup](#backup)
   - [Github Actions for Archive](#github-actions-for-archive)
 - [Author](#author)
 - [🤝 Contributing](#-contributing)
