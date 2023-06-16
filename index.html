@@ -89,7 +89,7 @@
 </code></pre>
 				<p>Run <code>arweave-archive</code> or <code>aar</code> in terminal for more information regarding how to use the CLI.</p>
 				<pre><code class="language-html">$ aar
-Usage: Arweave-Archive [options] [command]
+Usage: arweave-archive [options] [command]
 
 A CLI tool to archive webpage and it&#x27;s screenshot to Arweave
 
@@ -100,8 +100,8 @@ Options:
 Commands:
   setup <span class="hljs-tag">&lt;<span class="hljs-name">jwkPath</span>&gt;</span>          setup Arweave JWK file path
   archive [options] <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>  archive url single page webpage and screenshot to Arweave
-  archives                 display all your archives
-  backup <span class="hljs-tag">&lt;<span class="hljs-name">path</span>&gt;</span>            backup archives information
+  archives [options]       display all your archives
+  backup [options] <span class="hljs-tag">&lt;<span class="hljs-name">path</span>&gt;</span>  backup archives information
   init-action              initialize archive github action
   help [command]           display help for command
 </code></pre>
@@ -126,7 +126,7 @@ Commands:
 				<a href="#archive" id="archive" style="color: inherit; text-decoration: none;">
 					<h3>Archive</h3>
 				</a>
-				<pre><code class="language-html">Usage: Arweave-Archive archive [options] <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>
+				<pre><code class="language-html">Usage: arweave-archive archive [options] <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>
 
 archive url single page webpage and screenshot to Arweave
 
@@ -142,12 +142,22 @@ Options:
 				<p>Run this command to save single page html and screenshot for the given url to Arweave.</p>
 				<pre><code class="language-sh">aar archive https://arweave.org
 </code></pre>
-				<p>To display all the archives made:</p>
+				<a href="#archives" id="archives" style="color: inherit; text-decoration: none;">
+					<h2>Archives</h2>
+				</a>
+				<p>To display all your archives:</p>
 				<pre><code class="language-sh">aar archives
+</code></pre>
+				<a href="#backup" id="backup" style="color: inherit; text-decoration: none;">
+					<h2>Backup</h2>
+				</a>
+				<p>To backup all your archives to a file:</p>
+				<pre><code class="language-sh">aar backup <span class="hljs-string">&#x27;saved.json&#x27;</span>
 </code></pre>
 				<a href="#github-actions-for-archive" id="github-actions-for-archive" style="color: inherit; text-decoration: none;">
 					<h3>Github Actions for Archive</h3>
 				</a>
+				<p>To add arweave archive github action to a git repo:</p>
 				<pre><code class="language-sh">aar init-action
 </code></pre>
 				<a href="#author" id="author" style="color: inherit; text-decoration: none;">
@@ -209,13 +219,10 @@ Options:
 						<a href="globals.html#getconfig" class="tsd-kind-icon">get<wbr>Config</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#getdb" class="tsd-kind-icon">get<wbr>Db</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getdbdata" class="tsd-kind-icon">get<wbr>DbData</a>
-					</li>
-					<li class=" tsd-kind-function">
 						<a href="globals.html#geterrormessage" class="tsd-kind-icon">get<wbr>Error<wbr>Message</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getjwk" class="tsd-kind-icon">getJWK</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#initaction" class="tsd-kind-icon">init<wbr>Action</a>
@@ -225,9 +232,6 @@ Options:
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#joinurl" class="tsd-kind-icon">join<wbr>Url</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#savetolocal" class="tsd-kind-icon">save<wbr>ToLocal</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#setup" class="tsd-kind-icon">setup</a>
