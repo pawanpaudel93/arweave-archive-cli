@@ -1,23 +1,17 @@
 import fsPromises from 'node:fs/promises'
+import { Archive } from 'arweave-archive'
 
-import { getDbData, logger } from './config'
+import { getJWK, logger } from './config'
 import { getErrorMessage } from './utils'
 
-export async function saveToLocal(path: string) {
-  const [data, dataPresent] = await getDbData('archives')
-  if (dataPresent)
-    await fsPromises.writeFile(path, data as string)
-
-  return [data, dataPresent]
-}
-
-export async function backup(path: string) {
+export async function backup(path: string, options: { jwkPath?: string }) {
   logger.info(`Saving to ${path}.`)
   try {
-    const [data, dataPresent] = await saveToLocal(path)
-    if (!dataPresent)
-      logger.info(data)
-    else logger.info('Saved!!!')
+    const jwk = await getJWK(options.jwkPath)
+    const archive = new Archive(jwk)
+    const archives = await archive.getAllArchives()
+    await fsPromises.writeFile(path, JSON.stringify(archives, null, 4))
+    logger.info('Saved!!!')
   }
   catch (error) {
     logger.error(getErrorMessage(error))

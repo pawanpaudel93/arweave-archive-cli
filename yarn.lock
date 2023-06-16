@@ -1551,11 +1551,6 @@ bl@^4.0.3, bl@^4.1.0:
     inherits "^2.0.4"
     readable-stream "^3.4.0"
 
-bluebird@3.5.1:
-  version "3.5.1"
-  resolved "https://registry.npmjs.org/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
-  integrity sha512-MKiLiV+I1AA596t9w1sQJ8jkiSr5+ZKi0WKrYGUn6d1Fx+Ij4tIj+m2WMQSGczs5jZVxV339chE8iwk6F64wjA==
-
 bn.js@^4.0.0, bn.js@^4.11.9:
   version "4.12.0"
   resolved "https://registry.npmjs.org/bn.js/-/bn.js-4.12.0.tgz#775b3f278efbb9718eec7361f483fb36fbbfea88"
@@ -4504,19 +4499,6 @@ log-update@^4.0.0:
     cli-cursor "^3.1.0"
     slice-ansi "^4.0.0"
     wrap-ansi "^6.2.0"
-
-lokijs-promise@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.npmjs.org/lokijs-promise/-/lokijs-promise-1.0.4.tgz#6fc9bf6fd059b71892e0579d39eb263a57c2faa3"
-  integrity sha512-c2nyZLw0AkVtYQVKtq2dh1DbUijEw88hMXFh85SOcyViNFUUXO9djS6HrI0CTHIPwapP/zCBv32pq0j1IVkB8g==
-  dependencies:
-    bluebird "3.5.1"
-    lokijs "1.5.5"
-
-lokijs@1.5.5:
-  version "1.5.5"
-  resolved "https://registry.npmjs.org/lokijs/-/lokijs-1.5.5.tgz#1c21f82af7579037fade7b9e4813485c23708bb6"
-  integrity sha512-ZTtuyUBxSqkEmgIgEgfxBTnW2UxQsdh1Tm1b4QxKjm86bsDQJSN1AWZ+awspdjC7RWjwjbfI9LNL1NmtTJkVyA==
 
 longest@^2.0.1:
   version "2.0.1"

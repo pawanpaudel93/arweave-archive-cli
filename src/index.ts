@@ -39,12 +39,14 @@ program
 program
   .command('archives')
   .description('display all your archives')
+  .option('-j, --jwk-path <jwkPath>', 'Arweave JWK file path')
   .action(archives)
 
 program
   .command('backup')
   .description('backup archives information')
   .argument('<path>', 'save to local path')
+  .option('-j, --jwk-path <jwkPath>', 'Arweave JWK file path')
   .action(backup)
 
 program
