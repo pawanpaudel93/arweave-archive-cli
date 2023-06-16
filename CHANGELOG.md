@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/pawanpaudel93/arweave-archive-cli/compare/v0.0.7...v0.0.8) (2023-06-16)
+
+
+### Bug Fixes
+
+* Update arweave-archive package ([de6b87d](https://github.com/pawanpaudel93/arweave-archive-cli/commit/de6b87dedf413e87c190b074b0195d3698ae78a7))
+* Update logging of archived data ([7c132c8](https://github.com/pawanpaudel93/arweave-archive-cli/commit/7c132c86e1b90d11906d7ad976a9b3867af7836d))
+
 ### [0.0.7](https://github.com/pawanpaudel93/arweave-archive-cli/compare/v0.0.6...v0.0.7) (2023-06-16)
 
 

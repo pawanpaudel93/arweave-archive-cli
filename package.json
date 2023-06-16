@@ -1,6 +1,6 @@
 {
   "name": "arweave-archive-cli",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A CLI tool to archive webpage and it's screenshot to Arweave.",
   "author": "Pawan Paudel <pawanpaudel93@gmail.com>",
   "license": "MIT",
@@ -50,7 +50,7 @@
     "version": "standard-version",
     "reset-hard": "git clean -dfx && git reset --hard && yarn",
     "prepare-release": "run-s reset-hard doc:html version doc:publish",
-    "publish-package": "run-s build && git push --follow-tags origin main && npm publish"
+    "publish-package": "npm run build && git push --follow-tags origin main && npm publish"
   },
   "dependencies": {
     "arweave-archive": "^0.0.11",
