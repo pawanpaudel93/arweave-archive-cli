@@ -29,8 +29,8 @@ export async function archive(
         screenshot,
         timestamp,
       }
-      const stringifiedData = JSON.stringify(archivedData, null, 4)
-      logger.info(`${url} archived.\n ${stringifiedData}`)
+      logger.info(`${url} archived.`)
+      console.log(archivedData)
     }
     else {
       logger.error(message)
