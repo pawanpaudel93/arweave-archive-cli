@@ -28,7 +28,7 @@ Run `arweave-archive` or `aar` in terminal for more information regarding how to
 
 ```html
 $ aar
-Usage: Arweave-Archive [options] [command]
+Usage: arweave-archive [options] [command]
 
 A CLI tool to archive webpage and it's screenshot to Arweave
 
@@ -39,8 +39,8 @@ Options:
 Commands:
   setup <jwkPath>          setup Arweave JWK file path
   archive [options] <url>  archive url single page webpage and screenshot to Arweave
-  archives                 display all your archives
-  backup <path>            backup archives information
+  archives [options]       display all your archives
+  backup [options] <path>  backup archives information
   init-action              initialize archive github action
   help [command]           display help for command
 ```
@@ -64,7 +64,7 @@ aar setup "arweave-jwk.json"
 ### Archive
 
 ```html
-Usage: Arweave-Archive archive [options] <url>
+Usage: arweave-archive archive [options] <url>
 
 archive url single page webpage and screenshot to Arweave
 
@@ -84,13 +84,25 @@ Run this command to save single page html and screenshot for the given url to Ar
 aar archive https://arweave.org
 ```
 
-To display all the archives made:
+## Archives
+
+To display all your archives:
 
 ```sh
 aar archives
 ```
 
+## Backup
+
+To backup all your archives to a file:
+
+```sh
+aar backup 'saved.json'
+```
+
 ### Github Actions for Archive
+
+To add arweave archive github action to a git repo:
 
 ```sh
 aar init-action

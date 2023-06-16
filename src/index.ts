@@ -9,7 +9,7 @@ import { initAction } from './lib/ghaction'
 
 const program = new Command()
 program
-  .name(CLI_NAME)
+  .name(CLI_NAME.toLowerCase())
   .description('A CLI tool to archive webpage and it\'s screenshot to Arweave')
   .version(CLI_VERSION, '-v, --version', 'output the version number')
 
