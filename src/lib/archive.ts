@@ -1,4 +1,4 @@
-import { Archive } from 'arweave-archive'
+import { ArweaveArchiver } from 'arweave-archive'
 
 import { getJWK, logger } from './config'
 import { getErrorMessage, joinUrl } from './utils'
@@ -10,7 +10,7 @@ export async function archive(
   try {
     logger.info(`Archiving url: ${url}.`)
     const jwk = await getJWK(options?.jwkPath)
-    const archive = new Archive(jwk, {
+    const archive = new ArweaveArchiver(jwk, {
       gatewayUrl: options.gatewayUrl,
       bundlerUrl: options.bundlerUrl,
     })
@@ -44,7 +44,7 @@ export async function archive(
 export async function archives(options: { jwkPath?: string }) {
   try {
     const jwk = await getJWK(options.jwkPath)
-    const archive = new Archive(jwk)
+    const archive = new ArweaveArchiver(jwk)
     const archives = await archive.getAllArchives()
     console.log(archives)
   }
