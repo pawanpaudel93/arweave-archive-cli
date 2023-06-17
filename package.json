@@ -1,6 +1,6 @@
 {
   "name": "arweave-archive-cli",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A CLI tool to archive webpage and it's screenshot to Arweave.",
   "author": "Pawan Paudel <pawanpaudel93@gmail.com>",
   "license": "MIT",
