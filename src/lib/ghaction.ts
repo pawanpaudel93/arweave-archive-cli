@@ -12,8 +12,7 @@ export async function initAction() {
     const response = await prompts({
       type: 'text',
       name: 'value',
-      message:
-        'Cron Expression for schedule. Default runs everyday at 00:00 AM',
+      message: 'Cron Expression for schedule. Default runs everyday at 00:00 AM',
       initial: '0 0 * * *',
       validate: (value) => {
         if (typeof value === 'string' && value.trim() !== '')
@@ -26,12 +25,7 @@ export async function initAction() {
     logger.info('Saving Archive github action...')
     const savePath = '.github/workflows/'
     let ARCHIVE_ACTION = (
-      await fsPromises.readFile(
-        path.join(
-          path.dirname(fs.realpathSync(__dirname)),
-          'actions/archive.yml',
-        ),
-      )
+      await fsPromises.readFile(path.join(path.dirname(fs.realpathSync(__dirname)), 'actions/archive.yml'))
     ).toString()
 
     if (!(await checkFileExists(savePath))) {
@@ -41,11 +35,7 @@ export async function initAction() {
     }
     ARCHIVE_ACTION = ARCHIVE_ACTION.replace(/CRON_EXPRESSION/g, response.value)
     await fsPromises.writeFile(`${savePath}archive.yml`, ARCHIVE_ACTION)
-    logger.info(
-      `\n${[
-        '1. Set github action secrets with key JWK for Arweave wallet JWK',
-      ].join('\n')}`,
-    )
+    logger.info(`\n${['1. Set github action secrets with key JWK for Arweave wallet JWK'].join('\n')}`)
     logger.info('Saved successfully.')
   }
   catch (error) {

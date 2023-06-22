@@ -24,16 +24,8 @@ program
   .description('archive url single page webpage and screenshot to Arweave')
   .argument('<url>', 'url to archive')
   .option('-j, --jwk-path <jwkPath>', 'Arweave JWK file path')
-  .option(
-    '-g, --gateway-url <gatewayUrl>',
-    'Arweave gateway URL',
-    'https://arweave.net',
-  )
-  .option(
-    '-b, --bundler-url <bundlerUrl>',
-    'Bundler URL',
-    'https://node2.bundlr.network',
-  )
+  .option('-g, --gateway-url <gatewayUrl>', 'Arweave gateway URL', 'https://arweave.net')
+  .option('-b, --bundler-url <bundlerUrl>', 'Bundler URL', 'https://node2.bundlr.network')
   .action(archive)
 
 program
@@ -49,9 +41,6 @@ program
   .option('-j, --jwk-path <jwkPath>', 'Arweave JWK file path')
   .action(backup)
 
-program
-  .command('init-action')
-  .description('initialize archive github action')
-  .action(initAction)
+program.command('init-action').description('initialize archive github action').action(initAction)
 
 program.parse(process.argv)

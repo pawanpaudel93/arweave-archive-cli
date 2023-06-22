@@ -3,10 +3,7 @@ import { ArweaveArchiver } from 'arweave-archive'
 import { getJWK, logger } from './config'
 import { getErrorMessage, joinUrl } from './utils'
 
-export async function archive(
-  url: string,
-  options: { jwkPath?: string; gatewayUrl: string; bundlerUrl: string },
-) {
+export async function archive(url: string, options: { jwkPath?: string; gatewayUrl: string; bundlerUrl: string }) {
   try {
     logger.info(`Archiving url: ${url}.`)
     const jwk = await getJWK(options?.jwkPath)
@@ -14,9 +11,7 @@ export async function archive(
       gatewayUrl: options.gatewayUrl,
       bundlerUrl: options.bundlerUrl,
     })
-    const { status, message, txID, title, timestamp } = await archiver.archiveUrl(
-      url,
-    )
+    const { status, message, txID, title, timestamp } = await archiver.archiveUrl(url)
     if (status === 'success') {
       const webpage = joinUrl(options.gatewayUrl, txID)
       const screenshot = joinUrl(options.gatewayUrl, `${txID}/screenshot`)

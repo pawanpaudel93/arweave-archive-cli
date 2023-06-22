@@ -53,7 +53,7 @@
     "publish-package": "npm run build && git push --follow-tags origin main && npm publish"
   },
   "dependencies": {
-    "arweave-archive": "^0.0.13",
+    "arweave-archive": "^0.0.14",
     "commander": "^9.5.0",
     "conf": "^10.2.0",
     "prompts": "^2.4.2",
