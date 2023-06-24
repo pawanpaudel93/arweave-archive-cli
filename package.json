@@ -50,10 +50,11 @@
     "version": "standard-version",
     "reset-hard": "git clean -dfx && git reset --hard && yarn",
     "prepare-release": "run-s reset-hard doc:html version doc:publish",
-    "publish-package": "npm run build && git push --follow-tags origin main && npm publish"
+    "publish-package": "npm run build && git push --follow-tags origin main && npm publish",
+    "release": "npm run prepare-release && npm run publish-package"
   },
   "dependencies": {
-    "arweave-archive": "^0.0.15",
+    "arweave-archive": "^0.0.16",
     "commander": "^9.5.0",
     "conf": "^10.2.0",
     "prompts": "^2.4.2",
